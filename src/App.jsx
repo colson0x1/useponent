@@ -1,7 +1,23 @@
+import Button from './Button';
+
 function App() {
   return (
     <div>
-      <h1>usePonent</h1>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
     </div>
   );
 }
