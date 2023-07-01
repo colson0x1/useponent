@@ -1,22 +1,36 @@
+import { GoBell, GoContainer, GoDatabase } from 'react-icons/go';
 import Button from './Button';
 
 function App() {
   return (
     <div>
       <div>
-        <Button secondary outline rounded>Add to Cart</Button>
+        <Button secondary rounded outline>
+          <GoBell />
+          Add to Cart
+        </Button>
       </div>
       <div>
-        <Button danger outline>Buy me a Coffee</Button>
+        <Button danger outline>
+          <GoContainer />
+          Buy me a Coffee
+        </Button>
       </div>
       <div>
-        <Button warning outline>Order Now</Button>
+        <Button warning>
+          <GoDatabase />
+          Order Now
+        </Button>
       </div>
       <div>
-        <Button secondary rounded>Subscribe to Prime</Button>
+        <Button secondary rounded>
+          Subscribe to Prime
+        </Button>
       </div>
       <div>
-        <Button primary>Update</Button>
+        <Button primary rounded outline>
+          Update
+        </Button>
       </div>
     </div>
   );
