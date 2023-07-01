@@ -16,7 +16,7 @@ function App() {
         <Button secondary rounded>Subscribe to Prime</Button>
       </div>
       <div>
-        <Button>Update</Button>
+        <Button primary>Update</Button>
       </div>
     </div>
   );
