@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <div>
-        <Button secondary rounded outline onClick={handleClick}>
+        <Button secondary rounded outline className="mb-5" onClick={handleClick}>
           <GoBell />
           Add to Cart
         </Button>
