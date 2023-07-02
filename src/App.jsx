@@ -12,24 +12,30 @@ function App() {
       id: '89jek2jksok',
       label: 'What Backend technologies will be used in typeMuse?',
       content:
-        'On the backend part, the entire system will use NEST.js for API development alongside with GraphQL on some instances.',
+        'On the backend part, the entire system will use NestJS for API development alongside with GraphQL on some instances.',
     },
     {
       id: 'were82jk0dj',
       label: 'What database will be used in typeMuse?',
       content:
-        'typeMuse will use PostgreSQL for data store along with Amazon S3.',
+        'typeMuse will use typeORM for PostgreSQL data store along with Amazon S3.',
     },
     {
       id: 's2erj22k2k',
       label: 'More on software architecture and technologies in typeMuse?',
       content:
-        'typeMuse will be using microservices architecture with technologies like Redis, Jenkins, Docker, Kubernetes, WebSockets, NGINX, Apache Kafka and more depending upon infrastructure and scalability. Later some services will be written in Golang for high performance!',
+        'typeMuse will use microservices architecture with technologies like Apache Kafka, Redis, Redis Pub/Sub, WebSockets, NGINX, Jenkins, Docker, Kubernetes, Amazon Web Services and more for scalability and robust infrastructure. Later some microservices will be written in Golang for high performance!',
     },
     {
       id: 'zs72j202jl',
       label: 'When I get to play typeMuse?',
-      content: 'typeMuse will be launched earlier next year (2024)!',
+      content: 'Chill. typeMuse will be launched earlier next year (2024)!',
+    },
+    {
+      id: 'q3oms92jl278',
+      label: 'Man behind typeMuse?',
+      content:
+        "I'm Colson. I'm interested in large web applications, technology infrastructure, scalability and distributed systems.",
     },
   ];
 
