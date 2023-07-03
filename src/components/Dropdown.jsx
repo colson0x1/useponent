@@ -11,7 +11,7 @@ function Dropdown({ options, value, onChange }) {
       if (!divEl.current) {
         return;
       }
-      
+
       if (!divEl.current.contains(event.target)) {
         setIsOpen(false);
       }
@@ -31,9 +31,7 @@ function Dropdown({ options, value, onChange }) {
   window.timeTwo = performance.now();
   const handleOptionClick = (option) => {
     window.timeOne = performance.now();
-    // CLOSE DROPDOWN
     setIsOpen(false);
-    // WHAT OPTION DID THE USER CLICK ON?
     onChange(option);
   };
 
