@@ -1,7 +1,5 @@
-import DropdownPage from "./pages/DropdownPage";
+import DropdownPage from './pages/DropdownPage';
 
-function App() {
-  return <DropdownPage />
-}
+function App() {}
 
 export default App;
