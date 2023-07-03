@@ -1,16 +1,19 @@
 import { GoBell, GoContainer, GoDatabase } from 'react-icons/go';
 import Button from '../components/Button';
 
-
 function ButtonPage() {
-  const handleClick = () => {
-    console.log('clicked!!');
-  }
+  const handleClick = () => {};
 
   return (
     <div>
       <div>
-        <Button secondary rounded outline className="mb-5" onClick={handleClick}>
+        <Button
+          secondary
+          rounded
+          outline
+          className="mb-5"
+          onClick={handleClick}
+        >
           <GoBell />
           Add to Cart
         </Button>

@@ -2,10 +2,15 @@ import { useState } from 'react';
 import Dropdown from '../components/Dropdown';
 
 function DropdownPage() {
-  const [selection, setSelection] = useState(null);
+  const [whiskeySelection, setWhiskeySelection] = useState(null);
+  const [smokeSelection, setSmokeSelection] = useState(null);
 
-  const handleSelect = (option) => {
-    setSelection(option);
+  const handleWhiskeySelect = (option) => {
+    setWhiskeySelection(option);
+  };
+
+  const handleSmokeSelect = (option) => {
+    setSmokeSelection(option);
   };
 
   const whiskey = [
@@ -16,16 +21,24 @@ function DropdownPage() {
   ];
 
   const smoke = [
-    { label: 'Marlboro Red' },
-    { label: 'Weed' },
-    { label: 'Treasurer Luxury Black' },
-    { label: 'Cigar' },
+    { label: 'Marlboro Red', value: 'marlboroRed' },
+    { label: 'Weed', value: 'weed' },
+    { label: 'Treasurer Luxury Black', value: 'treasurerBlack' },
+    { label: 'Cigar', value: 'cigar' },
   ];
 
   return (
     <div className="flex">
-      <Dropdown options={whiskey} value={selection} onChange={handleSelect} />
-      <Dropdown options={smoke} value={selection} onChange={handleSelect} />
+      <Dropdown
+        options={whiskey}
+        value={whiskeySelection}
+        onChange={handleWhiskeySelect}
+      />
+      <Dropdown
+        options={smoke}
+        value={smokeSelection}
+        onChange={handleSmokeSelect}
+      />
     </div>
   );
 }
