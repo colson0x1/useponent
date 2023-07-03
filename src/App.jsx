@@ -9,14 +9,17 @@ function App() {
   };
 
   const options = [
-    { label: 'Johnnie Walker Red Label', value: 'jw-rlabel' },
-    { label: 'Johnnie Walker Black Label', value: 'jw-blabel' },
-    { label: 'Johnnie Walker Green Label', value: 'jw-glabel' },
-    { label: 'Johnnie Walker Blue Label', value: 'jw-blabel' },
+    { label: 'Johnnie Walker Red Label', value: 'jwRedLabel' },
+    { label: 'Johnnie Walker Black Label', value: 'jwBlackLabel' },
+    { label: 'Johnnie Walker Green Label', value: 'jwGreenLabel' },
+    { label: 'Johnnie Walker Blue Label', value: 'jwBlueLabel' },
   ];
 
   return (
-    <Dropdown options={options} value={selection} onChange={handleSelect} />
+    <div className="flex">
+      <Dropdown options={options} value={selection} onChange={handleSelect} />
+      <Dropdown options={options} value={selection} onChange={handleSelect} />
+    </div>
   );
 }
 
