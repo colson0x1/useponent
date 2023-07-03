@@ -19,24 +19,24 @@ function ButtonPage() {
         </Button>
       </div>
       <div>
-        <Button danger outline onMouseEnter={handleClick}>
+        <Button className="mb-5" danger outline onMouseEnter={handleClick}>
           <GoContainer />
           Buy me a Coffee
         </Button>
       </div>
       <div>
-        <Button warning onMouseLeave={handleClick}>
+        <Button className="mb-5" warning onMouseLeave={handleClick}>
           <GoDatabase />
           Order Now
         </Button>
       </div>
       <div>
-        <Button secondary rounded>
+        <Button className="mb-5" secondary rounded>
           Subscribe to Prime
         </Button>
       </div>
       <div>
-        <Button primary rounded outline>
+        <Button className="mb-5" primary rounded outline>
           Update
         </Button>
       </div>
