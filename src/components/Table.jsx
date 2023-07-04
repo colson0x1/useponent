@@ -1,17 +1,19 @@
 function Table({ data }) {
   const renderedRows = data.map((user) => {
     return (
-      <tr key={user.username}>
-        <td>@{user.username}</td>
-        <td>{user.profileTheme}</td>
-        <td>{user.wpm} wpm</td>
+      <tr className="border-b" key={user.username}>
+        <td className="p-3">@{user.username}</td>
+        <td className="p-3">
+        <div className={`p-3 m-2 ${user.profileTheme}`}></div>
+        </td>
+        <td className="p-3">{user.wpm} wpm</td>
       </tr>
     )
   })
   return (
-    <table>
+    <table className="table-auto border-spacing-2">
     <thead>
-      <tr>
+      <tr className="border-b-2">
       <th>Username</th>
       <th>Profile Theme</th>
       <th>Score</th>
