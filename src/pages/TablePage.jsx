@@ -1,4 +1,5 @@
-import Table from '../components/Table';
+// import Table from '../components/Table';
+import SortableTable from '../components/SortableTable';
 
 function TablePage() {
   const data = [
@@ -6,19 +7,19 @@ function TablePage() {
       name: 'Shishir',
       username: 'spark',
       profileTheme: 'bg-gray-500',
-      wpm: 94,
+      wpm: 81,
     },
     {
       name: 'Samriddha',
       username: 'zephyr',
       profileTheme: 'bg-green-500',
-      wpm: 81,
+      wpm: 72,
     },
     {
       name: 'Nabin',
       username: 'nabineo',
       profileTheme: 'bg-yellow-500',
-      wpm: 96,
+      wpm: 85,
     },
     {
       name: 'Colson',
@@ -32,6 +33,7 @@ function TablePage() {
     {
       label: 'Name',
       render: (user) => user.name,
+      sortValue: (user) => user.name,
     },
     {
       label: 'Username',
@@ -39,12 +41,12 @@ function TablePage() {
     },
     {
       label: 'Profile Theme',
-      render: (user) => <div className={`p-4 m-2 ${user.profileTheme}`} />,
+      render: (user) => <div className={`p-3 m-2 ${user.profileTheme}`} />,
     },
     {
       label: 'Score',
       render: (user) => `${user.wpm} wpm`,
-      header: () => <th className="bg-blue-400 ">Score</th>,
+      sortValue: (user) => user.wpm,
     },
   ];
 
@@ -54,7 +56,7 @@ function TablePage() {
 
   return (
     <div>
-      <Table data={data} config={config} keyFn={keyFn} />
+      <SortableTable data={data} config={config} keyFn={keyFn} />
     </div>
   );
 }
