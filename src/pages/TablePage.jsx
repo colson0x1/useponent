@@ -6,7 +6,7 @@ function TablePage() {
     {
       name: 'Shishir',
       username: 'spark',
-      profileTheme: 'bg-gray-500',
+      profileTheme: 'bg-yellow-500',
       wpm: 81,
     },
     {
@@ -18,13 +18,13 @@ function TablePage() {
     {
       name: 'Nabin',
       username: 'nabineo',
-      profileTheme: 'bg-yellow-500',
+      profileTheme: 'bg-purple-500',
       wpm: 85,
     },
     {
       name: 'Colson',
       username: 'cols',
-      profileTheme: 'bg-orange-500',
+      profileTheme: 'bg-blue-500',
       wpm: 125,
     },
   ];
