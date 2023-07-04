@@ -44,9 +44,13 @@ function TablePage() {
     { label: 'Score', render: (user) => `${user.wpm} wpm` },
   ];
 
+  const keyFn = (user) => {
+    return user.username;
+  };
+
   return (
     <div>
-      <Table data={data} config={config} />
+      <Table data={data} config={config} keyFn={keyFn } />
     </div>
   );
 }

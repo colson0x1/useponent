@@ -1,18 +1,24 @@
-function Table({ data, config }) {
+function Table({ data, config, keyFn }) {
   const renderedHeaders = config.map((column) => {
     return <th key={column.label}>{column.label}</th>;
   });
 
-  const renderedRows = data.map((user) => {
+  const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => {
-      return <td className="p-2" key={column.label}>{column.render(user)}</td>;
+      return (
+        <td className="p-2" key={column.label}>
+          {column.render(rowData)}
+        </td>
+      );
     });
+
     return (
-      <tr className="border-b" key={user.username}>
+      <tr className="border-b" key={keyFn(rowData)}>
         {renderedCells}
       </tr>
     );
   });
+
   return (
     <table className="table-auto border-spacing-2">
       <thead>
