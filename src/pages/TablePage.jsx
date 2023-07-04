@@ -39,12 +39,12 @@ function TablePage() {
     },
     {
       label: 'Profile Theme',
-      render: (user) => <div className={`p-3 m-2 ${user.profileTheme}`} />,
+      render: (user) => <div className={`p-4 m-2 ${user.profileTheme}`} />,
     },
     {
       label: 'Score',
       render: (user) => `${user.wpm} wpm`,
-      header: () => <th className="bg-blue-300">Score</th>,
+      header: () => <th className="bg-blue-400 ">Score</th>,
     },
   ];
 
