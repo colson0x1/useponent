@@ -41,7 +41,11 @@ function TablePage() {
       label: 'Profile Theme',
       render: (user) => <div className={`p-3 m-2 ${user.profileTheme}`} />,
     },
-    { label: 'Score', render: (user) => `${user.wpm} wpm` },
+    {
+      label: 'Score',
+      render: (user) => `${user.wpm} wpm`,
+      header: () => <th className="bg-blue-300">Score</th>,
+    },
   ];
 
   const keyFn = (user) => {
@@ -50,7 +54,7 @@ function TablePage() {
 
   return (
     <div>
-      <Table data={data} config={config} keyFn={keyFn } />
+      <Table data={data} config={config} keyFn={keyFn} />
     </div>
   );
 }
