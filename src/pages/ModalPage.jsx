@@ -22,7 +22,12 @@ function ModalPage() {
   );
   const modal = (
     <Modal onClose={handleClose} actionBar={actionBar}>
-      <p>We use cookies here at typeMuse to enhance your gaming experience.</p>
+      <p>
+        At typeMuse, we leverage the utilization of cookies
+        to elevate your gaming experience, providing personalized optimizations
+        and enhanced gameplay mechanics that reflect our commitment to
+        delivering a professional and immersive gaming environment.
+      </p>
     </Modal>
   );
 
