@@ -9,9 +9,12 @@ function TablePage() {
   ];
 
   const config = [
-    { label: 'Username' },
-    { label: 'Profile Theme' },
-    { label: 'Score' },
+    {
+      label: 'Username',
+      render: (user) => `@${user.username}`,
+    },
+    { label: 'Profile Theme', render: (user) => user.profileTheme },
+    { label: 'Score', render: (user) => `${user.wpm} wpm` },
   ];
 
   return (

@@ -6,11 +6,9 @@ function Table({ data, config }) {
   const renderedRows = data.map((user) => {
     return (
       <tr className="border-b" key={user.username}>
-        <td className="p-3">@{user.username}</td>
-        <td className="p-3">
-          <div className={`p-3 m-2 ${user.profileTheme}`}></div>
-        </td>
-        <td className="p-3">{user.wpm} wpm</td>
+        <td className="p-3">{config[0].render(user)}</td>
+        <td className="p-3">{config[1].render(user)}</td>
+        <td className="p-3">{config[2].render(user)}</td>
       </tr>
     );
   });
