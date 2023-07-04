@@ -37,7 +37,10 @@ function TablePage() {
       label: 'Username',
       render: (user) => `@${user.username}`,
     },
-    { label: 'Profile Theme', render: (user) => user.profileTheme },
+    {
+      label: 'Profile Theme',
+      render: (user) => <div className={`p-3 m-2 ${user.profileTheme}`} />,
+    },
     { label: 'Score', render: (user) => `${user.wpm} wpm` },
   ];
 
