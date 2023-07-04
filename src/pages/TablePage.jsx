@@ -2,13 +2,37 @@ import Table from '../components/Table';
 
 function TablePage() {
   const data = [
-    { username: 'spark', profileTheme: 'bg-gray-500', wpm: 94 },
-    { username: 'zephyr', profileTheme: 'bg-green-500', wpm: 81 },
-    { username: 'nabineo', profileTheme: 'bg-yellow-500', wpm: 96 },
-    { username: 'cols', profileTheme: 'bg-orange-500', wpm: 125 },
+    {
+      name: 'Shishir',
+      username: 'spark',
+      profileTheme: 'bg-gray-500',
+      wpm: 94,
+    },
+    {
+      name: 'Samriddha',
+      username: 'zephyr',
+      profileTheme: 'bg-green-500',
+      wpm: 81,
+    },
+    {
+      name: 'Nabin',
+      username: 'nabineo',
+      profileTheme: 'bg-yellow-500',
+      wpm: 96,
+    },
+    {
+      name: 'Colson',
+      username: 'cols',
+      profileTheme: 'bg-orange-500',
+      wpm: 125,
+    },
   ];
 
   const config = [
+    {
+      label: 'Name',
+      render: (user) => user.name,
+    },
     {
       label: 'Username',
       render: (user) => `@${user.username}`,
