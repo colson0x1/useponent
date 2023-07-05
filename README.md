@@ -1,70 +1,310 @@
-# Getting Started with Create React App
+# usePonent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub](https://img.shields.io/github/license/colson0x1/useponent)
 
-## Available Scripts
+A collection of helpful components with custom hooks, a custom link using context and provider, and more for building React applications.
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+usePonent is a React component library that provides a set of reusable components and custom hooks to help you build modern web applications. It includes components such as Accordion, Button, Dropdown, Modal, SortableTable, and custom hooks like useCounter. These components and hooks can be easily integrated into your React projects to enhance the functionality and user experience of your application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### usePonent screenshot
+![usePonent screenshot](https://i.imgur.com/2VHccI9.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To use the usePonent library in your React project, you can install it from npm or yarn:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install useponent
+```
 
-### `npm run build`
+or
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn add useponent
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the components and hooks from usePonent, import them into your React application and start using them.
 
-### `npm run eject`
+Here is an example of how you can use the Accordion component:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```jsx
+import React from 'react';
+import { Accordion } from 'useponent';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+function App() {
+  const items = [
+    {
+      id: 'qasdj123lk2',
+      label: 'Question 1',
+      content: 'Answer 1',
+    },
+    {
+      id: '89jek2jksok',
+      label: 'Question 2',
+      content: 'Answer 2',
+    },
+    // Add more items as needed
+  ];
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  return <Accordion items={items} />;
+}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+export default App;
+```
 
-## Learn More
+In this example, the Accordion component is used to display a list of questions and answers in an expandable/collapsible format.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can similarly import and use other components such as Button, Dropdown, Modal, SortableTable, and custom hooks like useCounter in your application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For detailed usage examples and API documentation of each component and hook, refer to the documentation of each component or hook in the library.
 
-### Code Splitting
+## Custom Components and Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Accordion
 
-### Analyzing the Bundle Size
+The Accordion component provides a way to create expandable/collapsible sections. It accepts an array of items, each containing a unique `id`, a `label`, and `content`. Clicking on a section's label expands or collapses the corresponding content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Example usage:
 
-### Making a Progressive Web App
+```jsx
+import React from 'react';
+import { Accordion } from 'useponent';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+function MyComponent() {
+  const items = [
+    {
+      id: '1',
+      label: 'Question 1',
+      content: 'Answer 1',
+    },
+    {
+      id: '2',
+      label: 'Question 2',
+      content: 'Answer 2',
+    },
+    // Add more items as needed
+  ];
 
-### Advanced Configuration
+  return <Accordion items={items} />;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+export default MyComponent;
+```
 
-### Deployment
+### Button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The Button component provides a customizable button with various styles and variations. It supports primary, secondary, success, warning, and danger variations, as well as outline and rounded styles.
 
-### `npm run build` fails to minify
+Example usage:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsx
+import React from 'react';
+import { Button } from 'useponent';
+
+function MyComponent() {
+  return (
+    <div>
+      <Button primary>Primary Button</Button>
+      <Button secondary>Secondary Button</Button>
+      <Button success>Success Button</Button>
+      <Button warning>Warning Button</Button>
+      <Button danger>Danger Button</Button>
+      <Button outline>Outline Button</Button>
+      <Button rounded>Rounded Button</Button>
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+### Dropdown
+
+The Dropdown component provides a customizable dropdown select menu. It accepts an array of options and allows the user to select a value from the dropdown menu.
+
+Example usage:
+
+```jsx
+import React, { useState } from 'react';
+import { Dropdown } from 'useponent';
+
+function MyComponent() {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const options = [
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
+  ];
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
+
+  return (
+    <div>
+      <Dropdown
+        options={options}
+        value={selectedOption}
+        onChange={handleOptionChange}
+      />
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+### Modal
+
+The Modal component provides a modal dialog box that can be used to display additional content or capture user input. It can be triggered by a button click or any other event.
+
+Example usage:
+
+```jsx
+import React, { useState } from 'react';
+import { Modal, Button } from 'useponent';
+
+function MyComponent() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <div>
+      <Button onClick={handleOpenModal}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={handleCloseModal}>
+        <h2>Modal Title</h2>
+        <p>Modal Content</p>
+        <Button onClick={handleCloseModal}>Close</Button>
+      </Modal>
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+### SortableTable
+
+The SortableTable component provides a table with sortable columns. It allows the user to sort the table data based on a specific column by clicking on the column header.
+
+Example usage:
+
+```jsx
+import React from 'react';
+import { SortableTable } from 'useponent';
+
+function MyComponent() {
+  const data = [
+    { id: 1, name: 'Colson', wpmAvg: 110, email: 'cols@google.com' },
+    { id: 2, name: 'Shishir', wpmAvg: 85, email: 'spark@google.com' },
+    { id: 3, name: 'Samriddha', wpmAvg: 75, email: 'zephyr@google.com' },
+    // Add more data as needed
+  ];
+
+  const columns = [
+    { key: 'name', header: 'Name' },
+    { key: 'wpmAvg', header: 'Average WPM' },
+    { key: 'email', header: 'Email' },
+  ];
+
+  return <SortableTable data={data} columns={columns} />;
+}
+
+export default MyComponent;
+```
+
+### useCounter
+
+The useCounter hook provides a simple counter with increment, decrement, and reset functionality. It can be used to manage numeric values in your application.
+
+Example usage:
+
+```jsx
+import React from 'react';
+import { useCounter } from 'useponent';
+
+function MyComponent() {
+  const { count, increment, decrement, reset } = useCounter();
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+These are just a few examples of the components and hooks provided by usePonent. You can explore more components and hooks in the library documentation to find the ones that best fit your needs.
+
+## Conclusion
+
+usePonent is a versatile React component library that offers a variety of components and hooks to enhance your
+
+ application development experience. Whether you need UI components, form elements, or utility hooks, usePonent provides a comprehensive set of tools to simplify your React development process. Give it a try and see how it can streamline your workflow and improve your React projects.
+
+---
+
+## Screenshots
+
+### usePonent 
+![usePonent](https://i.imgur.com/2VHccI9.png)
+
+### usePonent - Dropdown
+![usePonent - Dropdown](https://i.imgur.com/BT206iO.png)
+
+### usePonent - First Dropdown Select
+![usePonent - First Dropdown Select](https://i.imgur.com/6iR1vA2.png)
+
+### usePonent - Second Dropdown Select
+![usePonent - Second Dropdown Select](https://i.imgur.com/NiCm3zQ.png)
+
+### usePonent - Both Dropdown Selected
+![usePonent - Both Dropdown Selected](https://i.imgur.com/TNWGBCi.png)
+
+### usePonent - Accordion Collapsed
+![usePonent - Accordion Collapsed](https://i.imgur.com/SNJvQux.png)
+
+### usePonent - Accordion Opened
+![usePonent - Accordion Opened](https://i.imgur.com/DxLFPIK.png)
+
+### usePonent - Button
+![usePonent - Button](https://i.imgur.com/DLuId7I.png)
+
+### usePonent - Modal
+![usePonent - Modal](https://i.imgur.com/dfPIVLT.png)
+
+### usePonent - Modal Opened
+![usePonent - Modal Opened](https://i.imgur.com/H565wS5.png)
+
+### usePonent - Table
+![usePonent - Table](https://i.imgur.com/SBtDDdi.png)
+
+### usePonent - Table Sorted by XPs
+![usePonent - Table Sorted by XPs](https://i.imgur.com/19Kq8gN.png)
+
+### usePonent - Table Sorted by WPM Score
+![usePonent - Table Sorted by WPM Score](https://i.imgur.com/fKVSld0.png)
+
+### usePonent - Table Sorted by Races
+![usePonent - Table Sorted by Races](https://i.imgur.com/TYKOV6g.png)
+
+
+### usePonent - Counter 
+![usePonent - Counter ](https://i.imgur.com/1tRDSJo.png)
