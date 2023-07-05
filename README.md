@@ -223,7 +223,7 @@ export default MyComponent;
 
 ### Counter
 
-The CounterPage component utilizes a reducer function, which is a fundamental concept in React for managing state updates. Reducers provide a predictable way to update and manipulate state in response to dispatched actions.
+The CounterPage component utilizes a reducer function to update and manipulate state in response to dispatched actions.
 
 In the CounterPage component, the reducer function is implemented using the `useReducer` hook from React. It takes in the current state and an action object, and based on the action type, it performs the necessary state updates using the Immer library for immutable updates.
 
