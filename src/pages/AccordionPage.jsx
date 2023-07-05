@@ -6,7 +6,7 @@ function AccordionPage() {
       id: 'qasdj123lk2',
       label: 'What technologies will be used in frontend in typeMuse?',
       content:
-        'Originally I was planning to write in pure REACT/REDUX with Server Side Rendering. Now the entire typeMuse system is being written using microfrontend architecture with NEXT.js with TypeScript, Tailwind CSS and Style Components.',
+        'Originally I was planning to write in pure REACT/REDUX with Server Side Rendering. Now the entire typeMuse system is being written using microfrontend architecture with NEXT.js, TypeScript and Style Components.',
     },
     {
       id: '89jek2jksok',
