@@ -1,12 +1,8 @@
 # usePonent
 
-![GitHub](https://img.shields.io/github/license/colson0x1/useponent)
-
-A collection of helpful components with custom hooks, a custom link using context and provider, and more for building React applications.
-
 ## Introduction
 
-usePonent is a React component library that provides a set of reusable components and custom hooks to help you build modern web applications. It includes components such as Accordion, Button, Dropdown, Modal, SortableTable, and custom hooks like useCounter. These components and hooks can be easily integrated into your React projects to enhance the functionality and user experience of your application.
+**usePonent** is a React component library that provides a set of reusable components and custom hooks to help you build modern web applications. It includes components such as Accordion, Button, Dropdown, Modal, SortableTable, and custom hooks like useCounter. These components and hooks can be easily integrated into your React projects to enhance the functionality and user experience of your application.
 
 ### usePonent screenshot
 ![usePonent screenshot](https://i.imgur.com/2VHccI9.png)
@@ -255,9 +251,7 @@ These are just a few examples of the components and hooks provided by usePonent.
 
 ## Conclusion
 
-usePonent is a versatile React component library that offers a variety of components and hooks to enhance your
-
- application development experience. Whether you need UI components, form elements, or utility hooks, usePonent provides a comprehensive set of tools to simplify your React development process. Give it a try and see how it can streamline your workflow and improve your React projects.
+**usePonent** is a versatile React component library that offers a variety of components and hooks to enhance your application development experience. Whether you need UI components, form elements, or utility hooks, usePonent provides a comprehensive set of tools to simplify your React development process. Give it a try and see how it can streamline your workflow and improve your React projects.
 
 ---
 
