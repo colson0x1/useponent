@@ -32,32 +32,33 @@ const reducer = (state, action) => {
 
   /* 
   @ Using classic Reducer 
+  
+  switch (action.type) {
+    case INCREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count + 1,
+      };
+    case DECREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count - 1,
+      };
+    case ADD_VALUE_TO_COUNT:
+      return {
+        ...state,
+        count: state.count + state.valueToAdd,
+        valueToAdd: 0,
+      };
+    case SET_VALUE_TO_ADD:
+      return {
+        ...state,
+        valueToAdd: action.payload,
+      };
+    default:
+      return state;
+  }
   */
-  // switch (action.type) {
-  //   case INCREMENT_COUNT:
-  //     return {
-  //       ...state,
-  //       count: state.count + 1,
-  //     };
-  //   case DECREMENT_COUNT:
-  //     return {
-  //       ...state,
-  //       count: state.count - 1,
-  //     };
-  //   case ADD_VALUE_TO_COUNT:
-  //     return {
-  //       ...state,
-  //       count: state.count + state.valueToAdd,
-  //       valueToAdd: 0,
-  //     };
-  //   case SET_VALUE_TO_ADD:
-  //     return {
-  //       ...state,
-  //       valueToAdd: action.payload,
-  //     };
-  //   default:
-  //     return state;
-  // }
 };
 
 function CounterPage({ initialCount }) {
