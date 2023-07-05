@@ -221,11 +221,73 @@ function MyComponent() {
 export default MyComponent;
 ```
 
-### useCounter
+### Counter
 
+The CounterPage component utilizes a reducer function, which is a fundamental concept in React for managing state updates. Reducers provide a predictable way to update and manipulate state in response to dispatched actions.
+
+In the CounterPage component, the reducer function is implemented using the `useReducer` hook from React. It takes in the current state and an action object, and based on the action type, it performs the necessary state updates using the Immer library for immutable updates.
+
+The reducer handles the following actions:
+
+- `INCREMENT_COUNT`: Increments the count by 1.
+- `DECREMENT_COUNT`: Decrements the count by 1.
+- `ADD_VALUE_TO_COUNT`: Adds the `valueToAdd` to the count and resets `valueToAdd` to 0.
+- `SET_VALUE_TO_ADD`: Sets the `valueToAdd` to the payload value.
+
+By dispatching these actions to the reducer, the CounterPage component manages its state effectively and updates the count accordingly. The use of Immer simplifies the process of updating the state immutably without the need for manual object cloning.
+
+### Usage
+
+To use the CounterPage component in your React project, follow these steps:
+
+1. Install the necessary dependencies:
+
+   ```bash
+   npm install immer react
+   ```
+
+2. Import the CounterPage component:
+
+   ```jsx
+   import CounterPage from './path/to/CounterPage';
+   ```
+
+3. Render the CounterPage component in your application:
+
+   ```jsx
+   function App() {
+     return (
+       <div>
+         {/* Other components */}
+         <CounterPage initialCount={0} />
+         {/* Other components */}
+       </div>
+     );
+   }
+   ```
+
+### Example
+
+Here's an example of how to use the CounterPage component in a React application:
+
+```jsx
+import React from 'react';
+import CounterPage from './CounterPage';
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <CounterPage initialCount={10} />
+      {/* Other components */}
+    </div>
+  );
+}
+
+export default App;
 ```
-// add counter docs
-```
+
+---
 
 These are just a few examples of the components and hooks provided by usePonent. You can explore more components and hooks in the library documentation to find the ones that best fit your needs.
 
