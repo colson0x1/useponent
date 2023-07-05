@@ -223,28 +223,8 @@ export default MyComponent;
 
 ### useCounter
 
-The useCounter hook provides a simple counter with increment, decrement, and reset functionality. It can be used to manage numeric values in your application.
-
-Example usage:
-
-```jsx
-import React from 'react';
-import { useCounter } from 'useponent';
-
-function MyComponent() {
-  const { count, increment, decrement, reset } = useCounter();
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-    </div>
-  );
-}
-
-export default MyComponent;
+```
+// add counter docs
 ```
 
 These are just a few examples of the components and hooks provided by usePonent. You can explore more components and hooks in the library documentation to find the ones that best fit your needs.
@@ -301,4 +281,16 @@ These are just a few examples of the components and hooks provided by usePonent.
 
 
 ### usePonent - Counter 
-![usePonent - Counter ](https://i.imgur.com/1tRDSJo.png)
+![usePonent - Counter ](https://i.imgur.com/wDHNqaJ.png)
+
+### usePonent - Counter Addition in Action
+![usePonent - Counter Addition in Action](https://i.imgur.com/FX0tmiM.png)
+
+## usePonent - Counter Addition Result
+![usePonent - Counter Addition Result](https://i.imgur.com/326cUWI.png)
+
+## usePonent - Counter Decrement in Action
+![usePonent - Counter Decrement in Action](https://i.imgur.com/AJeOdhF.png)
+
+## usePonent - Counter Increment in Action
+![usePonent - Counter Increment in Action](https://i.imgur.com/6fWoO9S.png)

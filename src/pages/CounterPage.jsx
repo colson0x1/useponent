@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Button from '../components/Button';
 import Panel from '../components/Panel';
 
@@ -27,14 +27,9 @@ function CounterPage({ initialCount }) {
     setValueToAdd(0);
   };
 
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
   return (
     <Panel className="m-3">
       <h1 className="text-3xl py-4 text-blue-500">Count is {count}</h1>
-      <p className="text-lg py-4 text-blue-400">console.log({count})</p>
       <div className="flex flex-row">
         <Button
           className="mr-2 my-4 text-red-400"
